@@ -1,19 +1,14 @@
 package com.gtappdevelopers.tablayoutinandroid;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabLayoutAdapter extends FragmentPagerAdapter {
-    private Context context;
     int tabCount;
-
-    public TabLayoutAdapter(Context ctx, FragmentManager fm, int tabCount) {
+    public TabLayoutAdapter(FragmentManager fm, int tabCount) {
         super(fm);
-        context = ctx;
         this.tabCount = tabCount;
     }
 
@@ -32,7 +27,6 @@ public class TabLayoutAdapter extends FragmentPagerAdapter {
                 return settingsFragment;
             default:
                 return null;
-
         }
     }
 

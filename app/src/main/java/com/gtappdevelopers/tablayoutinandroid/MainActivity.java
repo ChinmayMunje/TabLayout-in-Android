@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Settings"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(this,getSupportFragmentManager(),tabLayout.getTabCount());
+        TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(tabLayoutAdapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -43,6 +43,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 }
